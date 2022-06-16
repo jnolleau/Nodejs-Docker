@@ -1,0 +1,16 @@
+# This will be the prefix_ to container names
+# COMPOSE_PROJECT_NAME=my_node_server
+
+# Paths of sources files and webserver
+FRONT_DIR=frontend
+BACK_DIR=backend
+
+# URLs
+# API_URL="http://localhost:3000"
+
+# Version of services (always latest, under alpine if available)
+NODE_VERSION=current-alpine
+PGADMIN_VERSION=latest
+POSTGRES_VERSION=alpine
+ADMINER_VERSION=latest
+PHPPGADMIN_VERSION=latest
