@@ -1,3 +1,8 @@
+# Custom
+frontend/*
+!frontend/Dockerfile
+# !frontend/package.json
+
 # Logs
 logs
 *.log

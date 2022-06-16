@@ -1,0 +1,33 @@
+version: '3'
+
+services:  
+  
+  # frontend Service with vuejs framework
+  frontend:
+    # image: node:${NODE_VERSION}
+    build:
+      context: "./frontend"
+      args:
+       NODE_VERSION: ${NODE_VERSION}
+    volumes:
+      - ./frontend:/usr/src/app
+    ports:
+      - "8080:8080"
+      # - "5000:3000" #For json-server (development)
+    networks:
+      - network
+    environment:
+      NODE_ENV: development
+      # VUE_APP_API_URL: ${API_URL}
+    # command: sh -c "tail -f /dev/null"
+    # command: sh -c "npm install && npm run dev"
+    command: sh -c "npm run dev"
+    # depends_on:
+    #   - postgres
+
+    #  npm install -g @vue/cli
+
+
+# Networks
+networks:
+  network:
